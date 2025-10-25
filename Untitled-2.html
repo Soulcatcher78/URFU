@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoffeeTime — Меню</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- чекбокс должен быть перед header/.menu/footer -->
+    <input type="checkbox" id="theme-toggle" aria-label="Переключатель темы">
+
+    <header>
+        ☕ CoffeeTime — Меню
+        <label for="theme-toggle" class="theme-switch" role="button" aria-hidden="true">
+            🌙 / ☀️
+        </label>
+    </header>
+
+    <section class="menu">
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=600&q=60"
+                alt="Эспрессо">
+            <div class="card-content">
+                <h3>Эспрессо</h3>
+                <p class="price">180 ₽</p>
+                <p>Классический крепкий кофе, насыщенный и бодрящий.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=600&q=60"
+                alt="Капучино">
+            <div class="card-content">
+                <h3>Капучино</h3>
+                <p class="price">220 ₽</p>
+                <p>Нежная молочная пена и насыщенный вкус — идеальный баланс.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=600&q=60"
+                alt="Латте">
+            <div class="card-content">
+                <h3>Латте</h3>
+                <p class="price">230 ₽</p>
+                <p>Мягкий и сливочный, с лёгким ароматом кофе и молока.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=600&q=60"
+                alt="Мокко">
+            <div class="card-content">
+                <h3>Мокко</h3>
+                <p class="price">250 ₽</p>
+                <p>Сочетание кофе, шоколада и сливок для настоящих сладкоежек.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        © 2025 CoffeeTime — с любовью к кофе
+    </footer>
+</body>
+
+</html>
