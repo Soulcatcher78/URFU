@@ -1,0 +1,133 @@
+/* Общие стили */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    background: #f6f3ef;
+    color: #333;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* Скрытый чекбокс — он должен быть внутри <body> и выше header/.menu/footer */
+#theme-toggle {
+    display: none;
+}
+
+header {
+    background: #3e2723;
+    color: white;
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+    position: relative;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.theme-switch {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.12);
+    padding: 6px 10px;
+    border-radius: 10px;
+    transition: background 0.3s, color 0.3s;
+    user-select: none;
+}
+
+/* Сетка меню и карточки */
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+.card {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.4s ease, color 0.4s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 1rem 1.2rem;
+}
+
+.card h3 {
+    margin: 0.5rem 0;
+    color: #3e2723;
+    transition: color 0.4s ease;
+}
+
+.price {
+    color: #795548;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    transition: color 0.4s ease;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #3e2723;
+    color: white;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+    transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ==== ТЁМНАЯ ТЕМА ==== */
+/* Работает, потому что #theme-toggle находится перед header и .menu */
+#theme-toggle:checked~header {
+    background: #121212;
+    color: #f5f5f5;
+}
+
+#theme-toggle:checked~.menu {
+    background: #0f0f0f;
+    color: #eaeaea;
+}
+
+#theme-toggle:checked~.menu .card {
+    background: #1b1b1b;
+    color: #eaeaea;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.6);
+}
+
+#theme-toggle:checked~.menu .card h3 {
+    color: #f0e6d8;
+}
+
+#theme-toggle:checked~.menu .card .price {
+    color: #d7b08a;
+}
+
+#theme-toggle:checked~footer {
+    background: #121212;
+    color: #ddd;
+}
+
+HTML HTML+CSS #theme-toggle:checked~header .theme-switch {
+    background: rgba(255, 255, 255, 0.06);
+    color: #fff;
+}
