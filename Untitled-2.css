@@ -130,4 +130,5 @@ footer {
 HTML HTML+CSS #theme-toggle:checked~header .theme-switch {
     background: rgba(255, 255, 255, 0.06);
     color: #fff;
+
 }
