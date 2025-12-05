@@ -15,7 +15,7 @@ body {
 }
 
 header {
-    background: #3e2723;
+    background: #723;
     color: white;
     text-align: center;
     padding: 1.5rem 0;
@@ -132,6 +132,7 @@ HTML HTML+CSS #theme-toggle:checked~header .theme-switch {
     color: #fff;
 
 }
+
 
 
 
